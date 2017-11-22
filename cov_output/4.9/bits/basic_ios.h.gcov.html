@@ -32,16 +32,16 @@
             <td></td>
             <td class="headerItem">Lines:</td>
             <td class="headerCovTableEntry">0</td>
-            <td class="headerCovTableEntry">8</td>
+            <td class="headerCovTableEntry">4</td>
             <td class="headerCovTableEntryLo">0.0 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2017-11-01 15:30:36</td>
+            <td class="headerValue">2017-11-22 13:41:06</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">0</td>
-            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntry">3</td>
             <td class="headerCovTableEntryLo">0.0 %</td>
           </tr>
           <tr>
@@ -197,10 +197,10 @@
 <span class="lineNum">     126 </span>                :            :        *
 <span class="lineNum">     127 </span>                :            :        *  See std::ios_base::iostate for the possible bit values.  Most
 <span class="lineNum">     128 </span>                :            :        *  users will call one of the interpreting wrappers, e.g., good().
-<a name="129"><span class="lineNum">     129 </span>                :            :       */</a>
+<span class="lineNum">     129 </span>                :            :       */
 <span class="lineNum">     130 </span>                :            :       iostate
-<span class="lineNum">     131 </span>                :<span class="lineNoCov">          0 :       rdstate() const</span>
-<span class="lineNum">     132 </span>                :<span class="lineNoCov">          0 :       { return _M_streambuf_state; }</span>
+<span class="lineNum">     131 </span>                :            :       rdstate() const
+<span class="lineNum">     132 </span>                :            :       { return _M_streambuf_state; }
 <span class="lineNum">     133 </span>                :            : 
 <span class="lineNum">     134 </span>                :            :       /**
 <span class="lineNum">     135 </span>                :            :        *  @brief  [Re]sets the error state.
@@ -217,10 +217,10 @@
 <span class="lineNum">     146 </span>                :            :        *  @param  __state  The additional state flag(s) to set.
 <span class="lineNum">     147 </span>                :            :        *
 <span class="lineNum">     148 </span>                :            :        *  See std::ios_base::iostate for the possible bit values.
-<a name="149"><span class="lineNum">     149 </span>                :            :       */</a>
+<span class="lineNum">     149 </span>                :            :       */
 <span class="lineNum">     150 </span>                :            :       void
-<span class="lineNum">     151 </span>                :<span class="lineNoCov">          0 :       setstate(iostate __state)</span>
-<span class="lineNum">     152 </span>                :<span class="lineNoCov">          0 :       { this-&gt;clear(this-&gt;rdstate() | __state); }</span>
+<span class="lineNum">     151 </span>                :            :       setstate(iostate __state)
+<span class="lineNum">     152 </span>                :            :       { this-&gt;clear(this-&gt;rdstate() | __state); }
 <span class="lineNum">     153 </span>                :            : 
 <span class="lineNum">     154 </span>                :            :       // Flip the internal state on for the proper state bits, then re
 <span class="lineNum">     155 </span>                :            :       // throws the propagated exception if bit also set in

@@ -31,27 +31,27 @@
             <td class="headerValue">.coverage.total</td>
             <td></td>
             <td class="headerItem">Lines:</td>
-            <td class="headerCovTableEntry">15</td>
-            <td class="headerCovTableEntry">22</td>
-            <td class="headerCovTableEntryLo">68.2 %</td>
+            <td class="headerCovTableEntry">11</td>
+            <td class="headerCovTableEntry">18</td>
+            <td class="headerCovTableEntryLo">61.1 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2017-11-01 15:30:36</td>
+            <td class="headerValue">2017-11-22 13:41:06</td>
             <td></td>
             <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">7</td>
             <td class="headerCovTableEntry">11</td>
-            <td class="headerCovTableEntry">16</td>
-            <td class="headerCovTableEntryLo">68.8 %</td>
+            <td class="headerCovTableEntryLo">63.6 %</td>
           </tr>
           <tr>
             <td></td>
             <td></td>
             <td></td>
             <td class="headerItem">Branches:</td>
-            <td class="headerCovTableEntry">4</td>
-            <td class="headerCovTableEntry">22</td>
-            <td class="headerCovTableEntryLo">18.2 %</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntry">12</td>
+            <td class="headerCovTableEntryLo">16.7 %</td>
           </tr>
           <tr><td><img src="../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
         </table>
@@ -324,7 +324,7 @@
 <span class="lineNum">     253 </span>                :            : //   Expected: Foo() is even
 <a name="254"><span class="lineNum">     254 </span>                :            : //     Actual: it's 5</a>
 <span class="lineNum">     255 </span>                :            : //
-<span class="lineNum">     256 </span>        [<span class="branchCov" title="Branch 1 was taken 27 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">         27 : class GTEST_API_ AssertionResult {</span>
+<span class="lineNum">     256 </span>        [<span class="branchCov" title="Branch 1 was taken 50 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">         50 : class GTEST_API_ AssertionResult {</span>
 <span class="lineNum">     257 </span>                :            :  public:
 <span class="lineNum">     258 </span>                :            :   // Copy constructor.
 <span class="lineNum">     259 </span>                :            :   // Used in EXPECT_TRUE/FALSE(assertion_result).
@@ -356,7 +356,7 @@
 <span class="lineNum">     285 </span>                :            :   }
 <a name="286"><span class="lineNum">     286 </span>                :            : </a>
 <span class="lineNum">     287 </span>                :            :   // Returns true iff the assertion succeeded.
-<span class="lineNum">     288 </span>                :<span class="lineCov">         54 :   operator bool() const { return success_; }  // NOLINT</span>
+<span class="lineNum">     288 </span>                :<span class="lineCov">        100 :   operator bool() const { return success_; }  // NOLINT</span>
 <span class="lineNum">     289 </span>                :            : 
 <span class="lineNum">     290 </span>                :            :   // Returns the assertion's negation. Used with EXPECT/ASSERT_FALSE.
 <span class="lineNum">     291 </span>                :            :   AssertionResult operator!() const;
@@ -457,7 +457,7 @@
 <span class="lineNum">     386 </span>                :            :   // test in test case Foo.  Hence a sub-class can define its own
 <a name="387"><span class="lineNum">     387 </span>                :            :   // SetUpTestCase() method to shadow the one defined in the super</a>
 <span class="lineNum">     388 </span>                :            :   // class.
-<span class="lineNum">     389 </span>                :<span class="lineCov">          6 :   static void SetUpTestCase() {}</span>
+<span class="lineNum">     389 </span>                :<span class="lineCov">         14 :   static void SetUpTestCase() {}</span>
 <span class="lineNum">     390 </span>                :            : 
 <span class="lineNum">     391 </span>                :            :   // Tears down the stuff shared by all tests in this test case.
 <span class="lineNum">     392 </span>                :            :   //
@@ -465,7 +465,7 @@
 <span class="lineNum">     394 </span>                :            :   // test in test case Foo.  Hence a sub-class can define its own
 <a name="395"><span class="lineNum">     395 </span>                :            :   // TearDownTestCase() method to shadow the one defined in the super</a>
 <span class="lineNum">     396 </span>                :            :   // class.
-<span class="lineNum">     397 </span>                :<span class="lineCov">          6 :   static void TearDownTestCase() {}</span>
+<span class="lineNum">     397 </span>                :<span class="lineCov">         14 :   static void TearDownTestCase() {}</span>
 <span class="lineNum">     398 </span>                :            : 
 <span class="lineNum">     399 </span>                :            :   // Returns true iff the current test has a fatal failure.
 <span class="lineNum">     400 </span>                :            :   static bool HasFatalFailure();
@@ -1451,19 +1451,18 @@
 <span class="lineNum">    1380 </span>                :            :                    FormatForComparisonFailureMessage(lhs, rhs),
 <span class="lineNum">    1381 </span>                :            :                    FormatForComparisonFailureMessage(rhs, lhs),
 <span class="lineNum">    1382 </span>[<span class="branchNoExec" title="Branch 2 was not executed"> # </span><span class="branchNoExec" title="Branch 3 was not executed"> # </span>][<span class="branchNoExec" title="Branch 5 was not executed"> # </span><span class="branchNoExec" title="Branch 6 was not executed"> # </span>]:<span class="lineNoCov">          0 :                    false);</span>
-<span class="lineNum">         </span>[<span class="branchNoExec" title="Branch 8 was not executed"> # </span><span class="branchNoExec" title="Branch 9 was not executed"> # </span>][<span class="branchNoExec" title="Branch 15 was not executed"> # </span><span class="branchNoExec" title="Branch 16 was not executed"> # </span>]
-<span class="lineNum">         </span>[<span class="branchNoExec" title="Branch 18 was not executed"> # </span><span class="branchNoExec" title="Branch 19 was not executed"> # </span>][<span class="branchNoExec" title="Branch 21 was not executed"> # </span><span class="branchNoExec" title="Branch 22 was not executed"> # </span>]
+<span class="lineNum">         </span>        [<span class="branchNoExec" title="Branch 8 was not executed"> # </span><span class="branchNoExec" title="Branch 9 was not executed"> # </span>]
 <span class="lineNum">    1383 </span>                :            : }
 <span class="lineNum">    1384 </span>                :            : 
 <a name="1385"><span class="lineNum">    1385 </span>                :            : // The helper function for {ASSERT|EXPECT}_EQ.</a>
 <span class="lineNum">    1386 </span>                :            : template &lt;typename T1, typename T2&gt;
-<span class="lineNum">    1387 </span>                :<span class="lineCov">         22 : AssertionResult CmpHelperEQ(const char* lhs_expression,</span>
+<span class="lineNum">    1387 </span>                :<span class="lineCov">         46 : AssertionResult CmpHelperEQ(const char* lhs_expression,</span>
 <span class="lineNum">    1388 </span>                :            :                             const char* rhs_expression,
 <span class="lineNum">    1389 </span>                :            :                             const T1&amp; lhs,
 <span class="lineNum">    1390 </span>                :            :                             const T2&amp; rhs) {
 <span class="lineNum">    1391 </span>                :            : GTEST_DISABLE_MSC_WARNINGS_PUSH_(4389 /* signed/unsigned mismatch */)
-<span class="lineNum">    1392 </span>[<span class="branchCov" title="Branch 0 was taken 7 times"> + </span><span class="branchNoCov" title="Branch 1 was not taken"> - </span>][<span class="branchCov" title="Branch 2 was taken 15 times"> + </span><span class="branchNoCov" title="Branch 3 was not taken"> - </span>]:<span class="lineCov">         22 :   if (lhs == rhs) {</span>
-<span class="lineNum">    1393 </span>                :<span class="lineCov">         22 :     return AssertionSuccess();</span>
+<span class="lineNum">    1392 </span>        [<span class="branchCov" title="Branch 0 was taken 46 times"> + </span><span class="branchNoCov" title="Branch 1 was not taken"> - </span>]:<span class="lineCov">         46 :   if (lhs == rhs) {</span>
+<span class="lineNum">    1393 </span>                :<span class="lineCov">         46 :     return AssertionSuccess();</span>
 <span class="lineNum">    1394 </span>                :            :   }
 <span class="lineNum">    1395 </span>                :            : GTEST_DISABLE_MSC_WARNINGS_POP_()
 <span class="lineNum">    1396 </span>                :            : 
@@ -1487,11 +1486,11 @@
 <span class="lineNum">    1414 </span>                :            :  public:
 <a name="1415"><span class="lineNum">    1415 </span>                :            :   // This templatized version is for the general case.</a>
 <span class="lineNum">    1416 </span>                :            :   template &lt;typename T1, typename T2&gt;
-<span class="lineNum">    1417 </span>                :<span class="lineCov">         16 :   static AssertionResult Compare(const char* lhs_expression,</span>
+<span class="lineNum">    1417 </span>                :<span class="lineCov">         46 :   static AssertionResult Compare(const char* lhs_expression,</span>
 <span class="lineNum">    1418 </span>                :            :                                  const char* rhs_expression,
 <span class="lineNum">    1419 </span>                :            :                                  const T1&amp; lhs,
 <span class="lineNum">    1420 </span>                :            :                                  const T2&amp; rhs) {
-<span class="lineNum">    1421 </span>                :<span class="lineCov">         16 :     return CmpHelperEQ(lhs_expression, rhs_expression, lhs, rhs);</span>
+<span class="lineNum">    1421 </span>                :<span class="lineCov">         46 :     return CmpHelperEQ(lhs_expression, rhs_expression, lhs, rhs);</span>
 <span class="lineNum">    1422 </span>                :            :   }
 <span class="lineNum">    1423 </span>                :            : 
 <span class="lineNum">    1424 </span>                :            :   // With this overloaded version, we allow anonymous enums to be used
@@ -1516,9 +1515,9 @@
 <span class="lineNum">    1443 </span>                :            :   // We define two overloaded versions of Compare().  The first
 <span class="lineNum">    1444 </span>                :            :   // version will be picked when the second argument to ASSERT_EQ() is
 <span class="lineNum">    1445 </span>                :            :   // NOT a pointer, e.g. ASSERT_EQ(0, AnIntFunction()) or
-<a name="1446"><span class="lineNum">    1446 </span>                :            :   // EXPECT_EQ(false, a_bool).</a>
+<span class="lineNum">    1446 </span>                :            :   // EXPECT_EQ(false, a_bool).
 <span class="lineNum">    1447 </span>                :            :   template &lt;typename T1, typename T2&gt;
-<span class="lineNum">    1448 </span>                :<span class="lineCov">          2 :   static AssertionResult Compare(</span>
+<span class="lineNum">    1448 </span>                :            :   static AssertionResult Compare(
 <span class="lineNum">    1449 </span>                :            :       const char* lhs_expression,
 <span class="lineNum">    1450 </span>                :            :       const char* rhs_expression,
 <span class="lineNum">    1451 </span>                :            :       const T1&amp; lhs,
@@ -1529,13 +1528,13 @@
 <span class="lineNum">    1456 </span>                :            :       // to match the Secret* in the other overload, which would otherwise make
 <span class="lineNum">    1457 </span>                :            :       // this template match better.
 <span class="lineNum">    1458 </span>                :            :       typename EnableIf&lt;!is_pointer&lt;T2&gt;::value&gt;::type* = 0) {
-<span class="lineNum">    1459 </span>                :<span class="lineCov">          2 :     return CmpHelperEQ(lhs_expression, rhs_expression, lhs, rhs);</span>
+<span class="lineNum">    1459 </span>                :            :     return CmpHelperEQ(lhs_expression, rhs_expression, lhs, rhs);
 <span class="lineNum">    1460 </span>                :            :   }
 <span class="lineNum">    1461 </span>                :            : 
 <span class="lineNum">    1462 </span>                :            :   // This version will be picked when the second argument to ASSERT_EQ() is a
-<a name="1463"><span class="lineNum">    1463 </span>                :            :   // pointer, e.g. ASSERT_EQ(NULL, a_pointer).</a>
+<span class="lineNum">    1463 </span>                :            :   // pointer, e.g. ASSERT_EQ(NULL, a_pointer).
 <span class="lineNum">    1464 </span>                :            :   template &lt;typename T&gt;
-<span class="lineNum">    1465 </span>                :<span class="lineCov">          4 :   static AssertionResult Compare(</span>
+<span class="lineNum">    1465 </span>                :            :   static AssertionResult Compare(
 <span class="lineNum">    1466 </span>                :            :       const char* lhs_expression,
 <span class="lineNum">    1467 </span>                :            :       const char* rhs_expression,
 <span class="lineNum">    1468 </span>                :            :       // We used to have a second template parameter instead of Secret*.  That
@@ -1548,7 +1547,7 @@
 <span class="lineNum">    1475 </span>                :            :       T* rhs) {
 <span class="lineNum">    1476 </span>                :            :     // We already know that 'lhs' is a null pointer.
 <span class="lineNum">    1477 </span>                :            :     return CmpHelperEQ(lhs_expression, rhs_expression,
-<span class="lineNum">    1478 </span>        [<span class="branchCov" title="Branch 1 was taken 4 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>]:<span class="lineCov">          4 :                        static_cast&lt;T*&gt;(NULL), rhs);</span>
+<span class="lineNum">    1478 </span>                :            :                        static_cast&lt;T*&gt;(NULL), rhs);
 <span class="lineNum">    1479 </span>                :            :   }
 <span class="lineNum">    1480 </span>                :            : };
 <span class="lineNum">    1481 </span>                :            : 

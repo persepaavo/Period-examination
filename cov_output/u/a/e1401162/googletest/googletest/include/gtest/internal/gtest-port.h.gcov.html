@@ -37,7 +37,7 @@
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2017-11-01 15:30:36</td>
+            <td class="headerValue">2017-11-22 13:41:06</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">4</td>
@@ -1225,7 +1225,7 @@
 <span class="lineNum">    1154 </span>                :            :   typedef T element_type;
 <a name="1155"><span class="lineNum">    1155 </span>                :            : </a>
 <span class="lineNum">    1156 </span>                :            :   explicit scoped_ptr(T* p = NULL) : ptr_(p) {}
-<span class="lineNum">    1157 </span>[<span class="branchCov" title="Branch 1 was taken 27 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 63 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">         90 :   ~scoped_ptr() { reset(); }</span>
+<span class="lineNum">    1157 </span>[<span class="branchCov" title="Branch 1 was taken 50 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchCov" title="Branch 4 was taken 136 times"> + </span><span class="branchNoCov" title="Branch 5 was not taken"> - </span>]:<span class="lineCov">        186 :   ~scoped_ptr() { reset(); }</span>
 <a name="1158"><span class="lineNum">    1158 </span>                :            : </a>
 <a name="1159"><span class="lineNum">    1159 </span>                :            :   T&amp; operator*() const { return *ptr_; }</a>
 <span class="lineNum">    1160 </span>                :<span class="lineNoCov">          0 :   T* operator-&gt;() const { return ptr_; }</span>
@@ -1237,14 +1237,14 @@
 <span class="lineNum">    1166 </span>                :            :     return ptr;
 <a name="1167"><span class="lineNum">    1167 </span>                :            :   }</a>
 <span class="lineNum">    1168 </span>                :            : 
-<span class="lineNum">    1169 </span>                :<span class="lineCov">         90 :   void reset(T* p = NULL) {</span>
-<span class="lineNum">    1170 </span>[<span class="branchCov" title="Branch 0 was taken 63 times"> + </span><span class="branchNoCov" title="Branch 1 was not taken"> - </span>][<span class="branchNoCov" title="Branch 2 was not taken"> - </span><span class="branchCov" title="Branch 3 was taken 27 times"> + </span>]:<span class="lineCov">         90 :     if (p != ptr_) {</span>
-<span class="lineNum">    1171 </span>[<span class="branchCov" title="Branch 1 was taken 63 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchNoExec" title="Branch 4 was not executed"> # </span><span class="branchNoExec" title="Branch 5 was not executed"> # </span>]:<span class="lineCov">         63 :       if (IsTrue(sizeof(T) &gt; 0)) {  // Makes sure T is a complete type.</span>
-<span class="lineNum">    1172 </span>[<span class="branchCov" title="Branch 0 was taken 63 times"> + </span><span class="branchNoCov" title="Branch 1 was not taken"> - </span>][<span class="branchNoExec" title="Branch 3 was not executed"> # </span><span class="branchNoExec" title="Branch 4 was not executed"> # </span>]:<span class="lineCov">         63 :         delete ptr_;</span>
+<span class="lineNum">    1169 </span>                :<span class="lineCov">        186 :   void reset(T* p = NULL) {</span>
+<span class="lineNum">    1170 </span>[<span class="branchCov" title="Branch 0 was taken 136 times"> + </span><span class="branchNoCov" title="Branch 1 was not taken"> - </span>][<span class="branchNoCov" title="Branch 2 was not taken"> - </span><span class="branchCov" title="Branch 3 was taken 50 times"> + </span>]:<span class="lineCov">        186 :     if (p != ptr_) {</span>
+<span class="lineNum">    1171 </span>[<span class="branchCov" title="Branch 1 was taken 136 times"> + </span><span class="branchNoCov" title="Branch 2 was not taken"> - </span>][<span class="branchNoExec" title="Branch 4 was not executed"> # </span><span class="branchNoExec" title="Branch 5 was not executed"> # </span>]:<span class="lineCov">        136 :       if (IsTrue(sizeof(T) &gt; 0)) {  // Makes sure T is a complete type.</span>
+<span class="lineNum">    1172 </span>[<span class="branchCov" title="Branch 0 was taken 136 times"> + </span><span class="branchNoCov" title="Branch 1 was not taken"> - </span>][<span class="branchNoExec" title="Branch 3 was not executed"> # </span><span class="branchNoExec" title="Branch 4 was not executed"> # </span>]:<span class="lineCov">        136 :         delete ptr_;</span>
 <span class="lineNum">    1173 </span>                :            :       }
-<span class="lineNum">    1174 </span>                :<span class="lineCov">         63 :       ptr_ = p;</span>
+<span class="lineNum">    1174 </span>                :<span class="lineCov">        136 :       ptr_ = p;</span>
 <span class="lineNum">    1175 </span>                :            :     }
-<span class="lineNum">    1176 </span>                :<span class="lineCov">         90 :   }</span>
+<span class="lineNum">    1176 </span>                :<span class="lineCov">        186 :   }</span>
 <span class="lineNum">    1177 </span>                :            : 
 <span class="lineNum">    1178 </span>                :            :   friend void swap(scoped_ptr&amp; a, scoped_ptr&amp; b) {
 <span class="lineNum">    1179 </span>                :            :     using std::swap;

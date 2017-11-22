@@ -14,6 +14,8 @@ int add_to_list(linked_list *ll, char *s){
 	newlist->next->data = s;
 	newlist->next->next = NULL;
 	newlist->next->index = t;
+	newlist->next->prev = newlist;
+	
 	return t;
 
 }
@@ -37,6 +39,7 @@ int display_list(linked_list *ll){
 	}
 	return t;
 }
+/*
 linked_list * search_from_list(linked_list *ll, char *s){
 	linked_list *currlist=ll;
 	while(currlist->next != NULL){
@@ -47,6 +50,7 @@ linked_list * search_from_list(linked_list *ll, char *s){
 	}
 	return 0;
 }
+*/
 int delete_from_list(linked_list *ll, int index){
 	linked_list *currlist = ll;
 	linked_list *templist = NULL;
@@ -98,6 +102,9 @@ int empty_list(linked_list *ll){
 int linkedlist_status(linked_list *ll){
 	linked_list *currlist=ll;
 	int t = 0;
+	if(currlist == NULL){
+		return -1;
+	}
 	while(currlist->next != NULL){
 		currlist = currlist->next;
 		printf("%s\n",currlist->data);

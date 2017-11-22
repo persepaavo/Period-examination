@@ -32,17 +32,17 @@
             <td></td>
             <td class="headerItem">Lines:</td>
             <td class="headerCovTableEntry">2</td>
-            <td class="headerCovTableEntry">4</td>
-            <td class="headerCovTableEntryLo">50.0 %</td>
+            <td class="headerCovTableEntry">2</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2017-11-01 15:30:36</td>
+            <td class="headerValue">2017-11-22 13:41:06</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">1</td>
-            <td class="headerCovTableEntry">2</td>
-            <td class="headerCovTableEntryLo">50.0 %</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
           </tr>
           <tr>
             <td></td>
@@ -187,8 +187,8 @@
 <span class="lineNum">     116 </span>                :            :   { return _Ios_Openmode(static_cast&lt;int&gt;(__a) &amp; static_cast&lt;int&gt;(__b)); }
 <a name="117"><span class="lineNum">     117 </span>                :            : </a>
 <span class="lineNum">     118 </span>                :            :   inline _GLIBCXX_CONSTEXPR _Ios_Openmode
-<span class="lineNum">     119 </span>                :<span class="lineCov">         63 :   operator|(_Ios_Openmode __a, _Ios_Openmode __b)</span>
-<span class="lineNum">     120 </span>                :<span class="lineCov">         63 :   { return _Ios_Openmode(static_cast&lt;int&gt;(__a) | static_cast&lt;int&gt;(__b)); }</span>
+<span class="lineNum">     119 </span>                :<span class="lineCov">        136 :   operator|(_Ios_Openmode __a, _Ios_Openmode __b)</span>
+<span class="lineNum">     120 </span>                :<span class="lineCov">        136 :   { return _Ios_Openmode(static_cast&lt;int&gt;(__a) | static_cast&lt;int&gt;(__b)); }</span>
 <span class="lineNum">     121 </span>                :            : 
 <span class="lineNum">     122 </span>                :            :   inline _GLIBCXX_CONSTEXPR _Ios_Openmode
 <span class="lineNum">     123 </span>                :            :   operator^(_Ios_Openmode __a, _Ios_Openmode __b)
@@ -223,10 +223,10 @@
 <span class="lineNum">     152 </span>                :            :   inline _GLIBCXX_CONSTEXPR _Ios_Iostate
 <span class="lineNum">     153 </span>                :            :   operator&amp;(_Ios_Iostate __a, _Ios_Iostate __b)
 <span class="lineNum">     154 </span>                :            :   { return _Ios_Iostate(static_cast&lt;int&gt;(__a) &amp; static_cast&lt;int&gt;(__b)); }
-<a name="155"><span class="lineNum">     155 </span>                :            : </a>
+<span class="lineNum">     155 </span>                :            : 
 <span class="lineNum">     156 </span>                :            :   inline _GLIBCXX_CONSTEXPR _Ios_Iostate
-<span class="lineNum">     157 </span>                :<span class="lineNoCov">          0 :   operator|(_Ios_Iostate __a, _Ios_Iostate __b)</span>
-<span class="lineNum">     158 </span>                :<span class="lineNoCov">          0 :   { return _Ios_Iostate(static_cast&lt;int&gt;(__a) | static_cast&lt;int&gt;(__b)); }</span>
+<span class="lineNum">     157 </span>                :            :   operator|(_Ios_Iostate __a, _Ios_Iostate __b)
+<span class="lineNum">     158 </span>                :            :   { return _Ios_Iostate(static_cast&lt;int&gt;(__a) | static_cast&lt;int&gt;(__b)); }
 <span class="lineNum">     159 </span>                :            : 
 <span class="lineNum">     160 </span>                :            :   inline _GLIBCXX_CONSTEXPR _Ios_Iostate
 <span class="lineNum">     161 </span>                :            :   operator^(_Ios_Iostate __a, _Ios_Iostate __b)

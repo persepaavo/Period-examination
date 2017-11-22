@@ -219,7 +219,9 @@ TEST(delete,multi) {
     for(i=0; i<40; i++)
         add_to_list(&head,str1);
 
-
+/////////////////////////////////////////////////////
+///// a bunch of i= were missing
+/////////////////////////////////////////////////////
     i=delete_from_list(&head,12);
     EXPECT_EQ(i,45);
     i=delete_from_list(&head,22);
@@ -233,7 +235,7 @@ TEST(delete,multi) {
 
     i=delete_from_list(&head,380);
     EXPECT_EQ(i,-1);
-
+//////////////////////////////////////////////////////
 }
 
 TEST(empty,normal) {
@@ -261,5 +263,29 @@ TEST(empty,normal) {
 	
 }
 
+TEST(prevlist,normal) {
+    char str[15]="List Start";
+    char str1[10]="zero";
+    char str2[10]="first";
+    char str3[10]="second";
+    char str4[10]="third";
+    char str5[10]="fourth";
+    char str6[10]="fifth";
+    int i;
 
+    linked_list head;
+    head.next=0;
+    head.data=str;
+    head.index=0;
 
+    i=add_to_list(&head,str1);
+    i=add_to_list(&head,str2);
+    i=add_to_list(&head,str3);
+    i=add_to_list(&head,str4);
+    i=add_to_list(&head,str5);
+    i=add_to_list(&head,str6);
+	
+	EXPECT_STREQ(head.next->prev->data,str);
+	EXPECT_STREQ(head.next->next->next->data,head.next->next->next->next->prev->data);
+	
+}

@@ -32,16 +32,16 @@
             <td></td>
             <td class="headerItem">Lines:</td>
             <td class="headerCovTableEntry">0</td>
-            <td class="headerCovTableEntry">32</td>
+            <td class="headerCovTableEntry">27</td>
             <td class="headerCovTableEntryLo">0.0 %</td>
           </tr>
           <tr>
             <td class="headerItem">Date:</td>
-            <td class="headerValue">2017-11-01 15:30:36</td>
+            <td class="headerValue">2017-11-22 13:41:06</td>
             <td></td>
             <td class="headerItem">Functions:</td>
             <td class="headerCovTableEntry">0</td>
-            <td class="headerCovTableEntry">17</td>
+            <td class="headerCovTableEntry">9</td>
             <td class="headerCovTableEntryLo">0.0 %</td>
           </tr>
           <tr>
@@ -50,7 +50,7 @@
             <td></td>
             <td class="headerItem">Branches:</td>
             <td class="headerCovTableEntry">0</td>
-            <td class="headerCovTableEntry">22</td>
+            <td class="headerCovTableEntry">10</td>
             <td class="headerCovTableEntryLo">0.0 %</td>
           </tr>
           <tr><td><img src="../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
@@ -477,19 +477,19 @@
 <span class="lineNum">     406 </span>                :            : // variable pointer or member function pointer doesn't really point to
 <span class="lineNum">     407 </span>                :            : // a location in the address space.  Their representation is
 <span class="lineNum">     408 </span>                :            : // implementation-defined.  Therefore they will be printed as raw
-<a name="409"><span class="lineNum">     409 </span>                :            : // bytes.)</a>
+<span class="lineNum">     409 </span>                :            : // bytes.)
 <span class="lineNum">     410 </span>                :            : template &lt;typename T&gt;
-<span class="lineNum">     411 </span>                :<span class="lineNoCov">          0 : void DefaultPrintTo(WrapPrinterType&lt;kPrintPointer&gt; /* dummy */,</span>
+<span class="lineNum">     411 </span>                :            : void DefaultPrintTo(WrapPrinterType&lt;kPrintPointer&gt; /* dummy */,
 <span class="lineNum">     412 </span>                :            :                     T* p, ::std::ostream* os) {
-<span class="lineNum">     413 </span>        [<span class="branchNoExec" title="Branch 0 was not executed"> # </span><span class="branchNoExec" title="Branch 1 was not executed"> # </span>]:<span class="lineNoCov">          0 :   if (p == NULL) {</span>
-<span class="lineNum">     414 </span>                :<span class="lineNoCov">          0 :     *os &lt;&lt; &quot;NULL&quot;;</span>
+<span class="lineNum">     413 </span>                :            :   if (p == NULL) {
+<span class="lineNum">     414 </span>                :            :     *os &lt;&lt; &quot;NULL&quot;;
 <span class="lineNum">     415 </span>                :            :   } else {
 <span class="lineNum">     416 </span>                :            :     // T is not a function type.  We just call &lt;&lt; to print p,
 <span class="lineNum">     417 </span>                :            :     // relying on ADL to pick up user-defined &lt;&lt; for their pointer
 <span class="lineNum">     418 </span>                :            :     // types, if any.
-<span class="lineNum">     419 </span>                :<span class="lineNoCov">          0 :     *os &lt;&lt; p;</span>
+<span class="lineNum">     419 </span>                :            :     *os &lt;&lt; p;
 <span class="lineNum">     420 </span>                :            :   }
-<span class="lineNum">     421 </span>                :<span class="lineNoCov">          0 : }</span>
+<span class="lineNum">     421 </span>                :            : }
 <span class="lineNum">     422 </span>                :            : template &lt;typename T&gt;
 <span class="lineNum">     423 </span>                :            : void DefaultPrintTo(WrapPrinterType&lt;kPrintFunctionPointer&gt; /* dummy */,
 <span class="lineNum">     424 </span>                :            :                     T* p, ::std::ostream* os) {
@@ -549,7 +549,7 @@
 <span class="lineNum">     478 </span>                :            :   // cause this warning, and use a separate overload of DefaultPrintTo for
 <span class="lineNum">     479 </span>                :            :   // function pointers so that the `*os &lt;&lt; p` in the object pointer overload
 <span class="lineNum">     480 </span>                :            :   // doesn't cause that warning either.
-<span class="lineNum">     481 </span>[<span class="branchNoExec" title="Branch 1 was not executed"> # </span><span class="branchNoExec" title="Branch 2 was not executed"> # </span>][<span class="branchNoExec" title="Branch 4 was not executed"> # </span><span class="branchNoExec" title="Branch 5 was not executed"> # </span>]:<span class="lineNoCov">          0 :   DefaultPrintTo(</span>
+<span class="lineNum">     481 </span>        [<span class="branchNoExec" title="Branch 1 was not executed"> # </span><span class="branchNoExec" title="Branch 2 was not executed"> # </span>]:<span class="lineNoCov">          0 :   DefaultPrintTo(</span>
 <span class="lineNum">     482 </span>                :            :       WrapPrinterType&lt;
 <span class="lineNum">     483 </span>                :            :           (sizeof(IsContainerTest&lt;T&gt;(0)) == sizeof(IsContainer)) &amp;&amp; !IsRecursiveContainer&lt;T&gt;::value
 <span class="lineNum">     484 </span>                :            :             ? kPrintContainer : !is_pointer&lt;T&gt;::value
@@ -1065,10 +1065,9 @@
 <a name="994"><span class="lineNum">     994 </span>                :            : </a>
 <span class="lineNum">     995 </span>                :            : template &lt;typename T&gt;
 <span class="lineNum">     996 </span>                :<span class="lineNoCov">          0 : ::std::string PrintToString(const T&amp; value) {</span>
-<span class="lineNum">     997 </span>[<span class="branchNoExec" title="Branch 2 was not executed"> # </span><span class="branchNoExec" title="Branch 3 was not executed"> # </span>][<span class="branchNoExec" title="Branch 6 was not executed"> # </span><span class="branchNoExec" title="Branch 7 was not executed"> # </span>]:<span class="lineNoCov">          0 :   ::std::stringstream ss;</span>
-<span class="lineNum">     998 </span>[<span class="branchNoExec" title="Branch 1 was not executed"> # </span><span class="branchNoExec" title="Branch 2 was not executed"> # </span>][<span class="branchNoExec" title="Branch 4 was not executed"> # </span><span class="branchNoExec" title="Branch 5 was not executed"> # </span>]:<span class="lineNoCov">          0 :   internal::UniversalTersePrinter&lt;T&gt;::Print(value, &amp;ss);</span>
+<span class="lineNum">     997 </span>        [<span class="branchNoExec" title="Branch 2 was not executed"> # </span><span class="branchNoExec" title="Branch 3 was not executed"> # </span>]:<span class="lineNoCov">          0 :   ::std::stringstream ss;</span>
+<span class="lineNum">     998 </span>        [<span class="branchNoExec" title="Branch 1 was not executed"> # </span><span class="branchNoExec" title="Branch 2 was not executed"> # </span>]:<span class="lineNoCov">          0 :   internal::UniversalTersePrinter&lt;T&gt;::Print(value, &amp;ss);</span>
 <span class="lineNum">     999 </span>[<span class="branchNoExec" title="Branch 1 was not executed"> # </span><span class="branchNoExec" title="Branch 2 was not executed"> # </span>][<span class="branchNoExec" title="Branch 4 was not executed"> # </span><span class="branchNoExec" title="Branch 5 was not executed"> # </span>]:<span class="lineNoCov">          0 :   return ss.str();</span>
-<span class="lineNum">         </span>[<span class="branchNoExec" title="Branch 8 was not executed"> # </span><span class="branchNoExec" title="Branch 9 was not executed"> # </span>][<span class="branchNoExec" title="Branch 11 was not executed"> # </span><span class="branchNoExec" title="Branch 12 was not executed"> # </span>]
 <span class="lineNum">    1000 </span>                :            : }
 <span class="lineNum">    1001 </span>                :            : 
 <span class="lineNum">    1002 </span>                :            : }  // namespace testing
