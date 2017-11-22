@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "linked_list.h"
+#include "linkList.h"
 
 
 
@@ -222,16 +222,16 @@ TEST(delete,multi) {
 
     i=delete_from_list(&head,12);
     EXPECT_EQ(i,45);
-    delete_from_list(&head,22);
+    i=delete_from_list(&head,22);
     EXPECT_EQ(i,44);
-    delete_from_list(&head,25);
+    i=delete_from_list(&head,25);
     EXPECT_EQ(i,43);
-    delete_from_list(&head,32);
+    i=delete_from_list(&head,32);
     EXPECT_EQ(i,42);
-    delete_from_list(&head,38);
+    i=delete_from_list(&head,38);
     EXPECT_EQ(i,41);
 
-    delete_from_list(&head,380);
+    i=delete_from_list(&head,380);
     EXPECT_EQ(i,-1);
 
 }
